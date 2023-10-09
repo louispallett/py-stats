@@ -35,7 +35,7 @@ def chartByGender():
 
     fig.suptitle("Population by Gender", fontsize=30, fontname="Carlito")
     plt.tight_layout()
-    plt.savefig("gender.png", dpi=300, bbox_inches="tight")
+    plt.savefig("./charts/gender.png", dpi=300, bbox_inches="tight")
 
 def chartQualifications():
     # Remove any missing data
@@ -77,7 +77,7 @@ def chartQualifications():
 
     fig.suptitle("Population by Qualification", fontsize=30, fontname="Carlito")
     plt.tight_layout()
-    plt.savefig("qualifications.png", dpi=300, bbox_inches="tight")
+    plt.savefig("./charts/qualifications.png", dpi=300, bbox_inches="tight")
 
 def displayHabits():
     style.use("dark_background")
@@ -99,6 +99,6 @@ def displayHabits():
 
     fig.suptitle("Smoking Habits: Weekdays vs. Weekends", fontsize=30, fontname="Carlito")
     plt.tight_layout()
-    plt.savefig("habits.png", dpi=500, bbox_inches="tight")
+    plt.savefig("./charts/habits.png", dpi=500, bbox_inches="tight")
 
 displayHabits()
