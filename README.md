@@ -27,4 +27,12 @@ Taking those who do smoke, we can plot their smoking habits verses their age by 
 
 ![2 scatter graphs displaying the number of times smokers smoke each day on weekdays verses the weekend](charts/habits.png)
 
-Again, there isn't a stark difference between the two, but we do get a couple of anomalies - namely, the two plots at 60 times smoking a day in their 30s during the weekend.  
+Again, there isn't a stark difference between the two, but we do get a couple of anomalies - namely, the two plots at 60 times smoking a day in their 30s during the weekend. The two participants in question, one male and the other female, smoke 40 and 30 times on weekdays respectively. This may display a trend to smoke more on weekends than on days, but calculating this based off two participants is unreasonable. Conversely, one participant - a male in his 60s, smokes 55 times a day on weekdays but only 5 times a day on weekends. This is such a large difference that it may be prudent to check the participant understood the question and was not providing the _total_ number of times smoked during weekdays (i.e., Monday to Friday).
+
+To further analyse the habits of smokers during weekends verses weekdays, we can plot a simple bar chart which takes the those smoke more during _weekends_, those who smoke more during _weekdays_ and those who smoke an _equal_ number of times:
+
+![Bar chart mapping the number of participants who smoke more during the weekend, more during weekdays, and an equal number of times](charts/weekdaysVsweekends.png)
+
+This displays some clearer trends. The majority of smokers do not change their smoking habits during the weekend or weekdays. However, of those who do, the vast majority smoke _more_ at the weekend than during the weekdays. This may be expected, due to "social" smoking during time off work (for those who work between Monday and Friday). However, we may expect the number of "weekend smokers" to be far higher - especially for those who may only smoke "socially" (i.e. with friends).
+
+However, it may simply be that those who participated and do smoke a small number of times "socially" do not consider themselves smokers and therefore are listed until the "No" category under the "Smoke" column. These participants, of course, have no data regarding the number of times they smoke a day. 

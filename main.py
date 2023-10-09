@@ -101,4 +101,26 @@ def displayHabits():
     plt.tight_layout()
     plt.savefig("./charts/habits.png", dpi=500, bbox_inches="tight")
 
-displayHabits()
+def weekdaysVsweekends():
+    style.use("dark_background")
+    smokers = pd.read_csv("smokers.csv")
+    # Removes any missing data - results however unaffected
+    smokers = df.dropna(subset=["amt_weekends"])
+    smokers = df.dropna(subset=["amt_weekdays"])
+    
+    moreWeekdays = len(smokers.loc[smokers["amt_weekends"] < smokers["amt_weekdays"]])
+    moreWeekends = len(smokers.loc[smokers["amt_weekends"] > smokers["amt_weekdays"]])
+    equal = len(smokers.loc[smokers["amt_weekends"] == smokers["amt_weekdays"]])
+
+    x = ["More at weekdays", "More at weekends", "Equal"]
+    y = [moreWeekdays, moreWeekends, equal]
+
+    plt.bar(x, y, width=0.7, color='skyblue', zorder=3)
+    for i in range(len(x)):
+        plt.text(i,y[i],y[i])
+    plt.grid(zorder=0)
+    plt.ylabel("Number of Participants")
+    plt.title("Smoking habits: Weekdays vs Weekends", fontsize=20)
+    plt.savefig("./charts/weekdaysVsweekends.png", dpi=300, bbox_inches="tight")
+
+weekdaysVsweekends()
